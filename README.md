@@ -16,6 +16,8 @@ I got inspired to build this after seeing [Brad Traversy's Custom Video Player f
 
 I looked at his code, recreated it exactly, wrote down the project specifications, and then created this mini web app from scratch based solely on those project specifications without looking at Brad's code. Any similarities are purely coincidental.
 
+I also like to thank the original creators of the Mandelbulb, Daniel White and Paul Nylander, without whom none of this would be possible, as well as the original creator of the video, PantheraLeo135953.
+
 ## License
 This is under an MIT licence. You can do whatever you want wth the code as long as you include the original copyright and license notice in any copy of the software/source.
 
