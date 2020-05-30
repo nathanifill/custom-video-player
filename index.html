@@ -1,0 +1,64 @@
+<!-- Original Mandelbulb video is from here: https://commons.wikimedia.org/wiki/File:Visit_of_the_Mandelbulb_(4K_UHD;_50FPS).webm -->
+<!-- poster image from here: https://commons.wikimedia.org/wiki/File:Mandelbulb_detail.png -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore The Mandelbulb | Mathematical Marvels</title>
+    <script
+      src="https://kit.fontawesome.com/0318f3c0e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title" class="title">Th<span class="flicker4">e</span> M<span class="flicker1">a</span>nd<span class="flicker3">e</span>lb<span class="flicker2">u</span><span class="flicker5">l</span>b</h1>
+    <main>
+    <div id="container" class="container">
+      <video
+        src="video/mandelbulb720.webm"
+        id="video"
+        class="video pointer"
+      ></video>
+      <div id="controls" class="controls">
+        <button id="play" class="play pointer">
+          <i class="fas fa-play fa-2x"></i>
+        </button>
+        <button id="stop" class="stop pointer">
+          <i class="fas fa-stop fa-2x"></i>
+        </button>
+        <span id="timestamp" class="timestamp">00:00</span>
+        <input
+          id="progress"
+          class="progress pointer"
+          type="range"
+          value="0"
+          min="0"
+          max="100"
+          step="1"
+        />
+      </div>
+    </div>
+    <section id="explanation" class="explanation">
+      <p>
+        <h3>What is the Mandelbulb?</h3>
+        The Mandelbulb is a three-dimensional fractal, constructed by Daniel White and Paul Nylander using spherical coordinates in 2009.
+
+        <h3>Did you know?</h3>
+        <ul>
+          <li>In the 2014 computer-animated film Big Hero 6, the climax takes place in the middle of a wormhole, which is represented by the stylized interior of a Mandelbulb.</li>
+          <li>In the 2018 science fiction horror film Annihilation, an extraterrestrial being appears in the form of a partial Mandelbulb.</li>
+          <li>In the webcomic Unsounded the spirit realm of the kerht is represented by a stylized golden mandelbulb.</li>
+        </ul>
+
+        Find out more about the Mandelbulb on <a href="https://en.wikipedia.org/wiki/Mandelbulb">Wikipedia</a>.
+      </p>
+
+      <h3>Credits</h3>
+      <p>"A flight to and around the Mandelbulb." was created with Mandelbulber2 by <a href="https://commons.wikimedia.org/wiki/User:PantheraLeo1359531">PantheraLeo1359531</a>. Original video available on <a href="https://commons.wikimedia.org/wiki/File:Visit_of_the_Mandelbulb_(4K_UHD;_50FPS).webm">Wikimedia</a>.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  </body>
+</html>

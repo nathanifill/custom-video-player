@@ -1,0 +1,296 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab&display=swap');
+
+/* GLOBAL VARIABLES */
+
+:root {
+  /* Color scheme - https://coolors.co/b74f6f-adbdff-3185fc-34e5ff-35281d */
+  --pink: #b74f6f;
+  --blue-purple: #adbdff;
+  --dark-blue: #3185fc;
+  --sky-blue: #34e5ff;
+  --brown: #35281d;
+
+  /* Sizing */
+  --video-width: 80vw;
+  --max-width: 800px;
+  --box-margin: 0.5em;
+
+  /* Border radii */
+  --border-radius: 10px;
+
+  /* Shadows */
+  --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ELEMENTS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--pink);
+  animation: bgColor 50s infinite alternate linear;
+  /* animation-delay: 5s; */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Slab', sans-serif;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+main {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CLASSES */
+
+.container {
+  filter: opacity(0%);
+  animation: fadeIn 2s ease-out 1 forwards;
+  animation-delay: 2s;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--box-margin);
+  max-width: var(--max-width);
+  /* width: var(--video-width); */
+}
+
+.controls {
+  align-items: center;
+  background-color: black;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.explanation {
+  filter: opacity(0%);
+  animation: fadeIn 2s ease-out 1 forwards;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  /* display: flex; */
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  /* justify-content: center; */
+  padding: 20px;
+  /* margin-top: 1em; */
+  margin: var(--box-margin);
+  max-width: var(--max-width);
+  /* width: 80vw; */
+}
+
+.fa-pause {
+  color: var(--blue-purple);
+  margin-right: 5px;
+}
+
+.fa-play {
+  color: var(--dark-blue);
+  margin-right: 5px;
+}
+
+.fa-stop {
+  color: var(--pink);
+}
+
+/* .fas { */
+/* text-shadow: 0px 0px 10px white; */
+/* } */
+
+.fas:hover {
+  /* animation: raiseButton 1s 1 forwards; */
+  /* transform: scale(1.1); */
+  filter: brightness(140%);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.progress {
+  width: 100%;
+  /* margin: 0 0 0 20px; */
+  padding: 0;
+}
+
+.timestamp {
+  font-size: 20px;
+  margin: 0 10px;
+  text-align: center;
+  width: 100px;
+}
+
+.title {
+  filter: opacity(0%);
+  animation: fadeIn 2s ease-out 1 forwards;
+  animation-delay: 1s;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.1),
+    0px 0px 8px rgba(255, 255, 255, 0.2), 0px 0px 9px rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 20px;
+}
+
+/* .title .flicker1 {
+  animation: flicker 1s ease-in-out 1 forwards;
+  animation-delay: 10s;
+}
+
+.title .flicker2 {
+  animation: flicker 2s ease-in-out 1 forwards;
+  animation-delay: 8s;
+}
+
+.title .flicker3 {
+  animation: flicker 3s ease-in-out 1 forwards;
+  animation-delay: 6s;
+}
+
+.title .flicker4 {
+  animation: flicker 4s ease-in-out 1 forwards;
+  animation-delay: 4s;
+}
+
+.title .flicker5 {
+  animation: flicker 5s ease-in-out 1 forwards;
+  animation-delay: 2s;
+} */
+
+.video {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  width: 100%;
+}
+
+.video:focus {
+  outline: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1000px) {
+  main,
+  .title {
+    max-width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container,
+  .controls {
+    max-width: 250px;
+  }
+  .progress {
+    max-width: 50px;
+  }
+  .timestamp {
+    margin: 0 5px;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes bgColor {
+  0% {
+    background-color: var(--pink);
+  }
+  33% {
+    background-color: var(--blue-purple);
+  }
+  67% {
+    background-color: var(--dark-blue);
+  }
+  100% {
+    background-color: var(--sky-blue);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    filter: brightness(0%);
+    filter: opacity(0%);
+  }
+  to {
+    filter: brightness(100%);
+    filter: opacity(100%);
+  }
+}
+
+@keyframes brightenUp {
+  from {
+    filter: brightness(10%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    filter: brightness(20%);
+  }
+  2% {
+    filter: brightness(20%);
+  }
+  4% {
+    filter: brightness(100%);
+  }
+  19% {
+    filter: brightness(100%);
+  }
+  21% {
+    filter: brightness(20%);
+  }
+  23% {
+    filter: brightness(100%);
+  }
+  80% {
+    filter: brightness(100%);
+  }
+  83% {
+    filter: brightness(40%);
+  }
+  87% {
+    filter: brightness(100%);
+  }
+}
