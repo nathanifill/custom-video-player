@@ -62,7 +62,7 @@ h6 {
 }
 
 main {
-  align-items: stretch;
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -79,9 +79,11 @@ main {
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: var(--box-margin);
   max-width: var(--max-width);
+  padding: 0;
 }
 
 .controls {
